@@ -16,7 +16,7 @@ public class oriMovement : MonoBehaviour
     private void Update()
     {
         _jumpPressed = Input.GetButtonDown("Jump");
-        if (_jumpPressed && _canJump || _canDoubleJump && _jumpPressed)
+        if (_jumpPressed)
         {
             if (_canJump)
             {
@@ -29,6 +29,11 @@ public class oriMovement : MonoBehaviour
                 _rb.velocity = new Vector3(0, 10, 0);
                 _canDoubleJump = false;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            _canDoubleJump = true;
+            Debug.Log("Reset double Jump");
         }
     }
     private void OnCollisionEnter(Collision collision)
