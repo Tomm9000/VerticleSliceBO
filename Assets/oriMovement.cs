@@ -12,6 +12,7 @@ public class oriMovement : MonoBehaviour
     private bool _canDoubleJump = false;
     private bool _doesWalk = false;
 
+   
     [SerializeField] float speed = 5f;
     //[SerializeField] float _jumpVelocity = 0;
     private void Start()
@@ -48,6 +49,18 @@ public class oriMovement : MonoBehaviour
             _canDoubleJump = true;
             Debug.Log("Reset double Jump");
         }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            _rb.constraints = RigidbodyConstraints.FreezePosition;
+            _rb.freezeRotation = false;
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+               
+                _rb.constraints = RigidbodyConstraints.None;
+                _rb.freezeRotation = true;
+                _rb.velocity = transform.forward * speed;
+            }
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -60,4 +73,5 @@ public class oriMovement : MonoBehaviour
     {
         health += amount;
     }
+    
 }
