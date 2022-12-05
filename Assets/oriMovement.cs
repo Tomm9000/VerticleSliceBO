@@ -74,17 +74,14 @@ public class oriMovement : MonoBehaviour
             _camera.transform.position = Vector3.MoveTowards(_camera.transform.position, new Vector3(transform.position.x, transform.position.y, -10), _cameraSpeed * Time.deltaTime);
 
         }
-        private void OnCollisionEnter(Collision collision)
+        //private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.CompareTag("Floor"))
+            //if (collision.gameObject.CompareTag("Floor"))
             {
-                _canJump = true;
+               // _canJump = true;
             }
         }
-        private void gainhealth(float amount)
-        {
-            health += amount;
-        }
+        
 
     }
 }
