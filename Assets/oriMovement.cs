@@ -37,18 +37,21 @@ public class oriMovement : MonoBehaviour
         if (_doesWalk)
         {
             _rb.velocity += new Vector3(Input.GetAxis("Horizontal") * speed, 0, 0) * Time.deltaTime;
+            //_rb.AddForce(transform.)
         }
         if (_jumpPressed)
         {
             if (_canJump)
             {
-                _rb.velocity += new Vector3(0, _jumpVelocity, 0) * Time.deltaTime;
+                //_rb.velocity += new Vector3(0, _jumpVelocity, 0) * Time.deltaTime;
+                _rb.AddForce(transform.up * _jumpVelocity);
                 _canJump = false;
                 _canDoubleJump = true;
             }
             else if (_canDoubleJump)
             {
-                _rb.velocity += new Vector3(0, _jumpVelocity, 0) * Time.deltaTime;
+                //_rb.velocity += new Vector3(0, _jumpVelocity, 0) * Time.deltaTime;
+                _rb.AddForce(transform.up * _jumpVelocity);
                 _canDoubleJump = false;
             }
             //else _jumpVelocity = 0;
