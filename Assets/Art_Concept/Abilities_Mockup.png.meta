@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4d992051badb4794a93933f14db2de5c
+guid: 7e6cc77fe7b911f468cc996b2f20757d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -7,7 +7,7 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Health_Bar_Mockup_0
+      name: Abilities_Mockup_0
       rect:
         serializedVersion: 2
-        x: 1032
-        y: 34
-        width: 32
-        height: 30
+        x: 915
+        y: 82
+        width: 67
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef6fc7af0e377954d99d7d6847208d2a
-      internalID: 14805315
+      spriteID: 40adb24e8a2a92845930f54656c80792
+      internalID: 266540992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Health_Bar_Mockup_1
+      name: Abilities_Mockup_1
       rect:
         serializedVersion: 2
-        x: 1065
-        y: 34
-        width: 32
-        height: 30
+        x: 951
+        y: 29
+        width: 55
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 708733723e0d1594fa70239575951c0a
-      internalID: 1564863196
+      spriteID: ccbdbea5ed8ef30408967ec4b4029877
+      internalID: 1915338009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Health_Bar_Mockup_2
+      name: Abilities_Mockup_2
       rect:
         serializedVersion: 2
-        x: 1097
-        y: 34
-        width: 32
-        height: 30
+        x: 891
+        y: 29
+        width: 47
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,50 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6338782ac26bb684794e96c9a8a3a92f
-      internalID: 13410515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Health_Bar_Mockup_3
-      rect:
-        serializedVersion: 2
-        x: 1133
-        y: 34
-        width: 34
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be1cf00e978a3bb438a222475936abd4
-      internalID: -1641895956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Health_Bar_Mockup_4
-      rect:
-        serializedVersion: 2
-        x: 1170
-        y: 34
-        width: 32
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40e24c6196f11d240b59c3b106312cd9
-      internalID: -1180738283
+      spriteID: cde9c6c083bc9bd4ba9262e7b86f930b
+      internalID: 2037148648
       vertices: []
       indices: 
       edges: []
@@ -212,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 089fb9e476ee10243b5c03d401fba507
+    spriteID: 6883eb7de7662e9438eb1871ae9eba43
     internalID: 0
     vertices: []
     indices: 
@@ -220,11 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Health_Bar_Mockup_3: -1641895956
-      Health_Bar_Mockup_0: 14805315
-      Health_Bar_Mockup_4: -1180738283
-      Health_Bar_Mockup_2: 13410515
-      Health_Bar_Mockup_1: 1564863196
+      Abilities_Mockup_0: 266540992
+      Abilities_Mockup_1: 1915338009
+      Abilities_Mockup_2: 2037148648
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

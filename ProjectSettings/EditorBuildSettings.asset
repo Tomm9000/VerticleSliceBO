@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/OriMovement.unity
+    guid: aea59a1a263ba2c478f8e30e7722c0d2
   m_configObjects: {}
