@@ -7,7 +7,7 @@ public class Movementscript : MonoBehaviour
     [SerializeField] private Rigidbody controller;
 
     [SerializeField] private float speed = 12f;
-    [SerializeField] private float jumpHeight = 3f;
+    
 
     Vector3 velocity;
 
