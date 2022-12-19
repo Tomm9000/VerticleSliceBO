@@ -6,7 +6,7 @@ using TMPro;
 public class HPbar : MonoBehaviour
 {
     [SerializeField] bool nostamina = true;
-    [SerializeField] int hp;
+    [SerializeField] public int hp;
     [SerializeField] int maxhp;
     [SerializeField] int stamina;
     [SerializeField] HealthBar healthBar;
