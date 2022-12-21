@@ -6,20 +6,39 @@ using TMPro;
 public class HPbar : MonoBehaviour
 {
     [SerializeField] bool nostamina = true;
-    [SerializeField] float hp;
-    [SerializeField] float stamina;
-    [SerializeField] TextMeshProUGUI hpdisplay;
-    [SerializeField] TextMeshProUGUI staminadisplay;
+    [SerializeField] public int hp;
+    [SerializeField] int maxhp;
+    [SerializeField] int stamina;
+    [SerializeField] HealthBar healthBar;
+    private int damage = 1;
+    [SerializeField] HealthBar staminaBar;
 
+
+    void Start()
+    {
+        hp = maxhp;
+        healthBar.SetMaxHealth(maxhp);
+    }
     void Update()
     {
-        hpdisplay.text = hp.ToString();
-        staminadisplay.text = stamina.ToString();
-        if(stamina < 10)
+
+        if (stamina < 1)
         {
             nostamina = false;
         }
-        if(nostamina == true)
+        else if(stamina > 0 && hp == 10)
+        {
+            nostamina = true;
+        }
+        if (hp >= 10)
+        {
+            nostamina = false;
+        }
+        else if (hp <= 9)
+        {
+            nostamina = true;
+        }
+        if (nostamina == true)
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
@@ -27,14 +46,21 @@ public class HPbar : MonoBehaviour
                 Stamina();
             }
         }
-
+        if (Input.GetKeyUp(KeyCode.G))
+        {
+            hp -= damage;
+            healthBar.SetHealth(hp);
+        }
+          
     }
     void Health()
     {
-        hp += 10;
+        hp += 1;
+        healthBar.SetHealth(hp);
     }
-    void Stamina()
+    void Stamina() //int amount
     {
-        stamina -= 10;
+        stamina -= 1;
+        staminaBar.SetHealth(stamina);
     }
 }
