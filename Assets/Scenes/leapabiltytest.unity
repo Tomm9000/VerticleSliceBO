@@ -434,9 +434,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 1475648257}
-  ability: 0
-  cam: {fileID: 877477256}
-  player: {fileID: 0}
 --- !u!54 &1475648257
 Rigidbody:
   m_ObjectHideFlags: 0
