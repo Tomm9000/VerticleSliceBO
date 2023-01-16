@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 612ecb583349aa84ca6c4bbcadd35ba9
+=======
+guid: 6c6f25506c34fb7489006e671561e4da
+>>>>>>> 8dad9bd4596ef3559402ce069a6fefb5e3a5f277
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -31,6 +35,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
+<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
       name: Take 001
@@ -61,6 +66,9 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+=======
+    clipAnimations: []
+>>>>>>> 8dad9bd4596ef3559402ce069a6fefb5e3a5f277
     isReadable: 0
   meshes:
     lODScreenPercentages: []
