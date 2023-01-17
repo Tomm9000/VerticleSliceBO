@@ -12,6 +12,9 @@ public class oriMovement : MonoBehaviour
     private bool _canDoubleJump = false;
     //private bool _doesWalk = false;
 
+    //Other Scripts
+    [SerializeField] UIElements _UIelements;
+
     // Camera
     [SerializeField] Camera _camera;
     private float _cameraSpeed = 5f;
@@ -21,11 +24,13 @@ public class oriMovement : MonoBehaviour
     [SerializeField] float _jumpVelocity = 5f;
     [SerializeField] float maxSpeed = 20f;
     [SerializeField] float acceleration = 5f;
+    private float currentSpeed;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _canJump = true;
+        _UIelements = GetComponent<UIElements>();
     }
     private void Update()
     {
@@ -67,11 +72,18 @@ public class oriMovement : MonoBehaviour
                 _rb.velocity += new Vector3(moveInput * maxSpeed * acceleration, 0, 0) * Time.deltaTime;
             }
         }
+        currentSpeed = _rb.velocity.magnitude - 1;
+        _cameraSpeed = currentSpeed;
         _camera.transform.position = Vector3.MoveTowards(_camera.transform.position, new Vector3(transform.position.x, transform.position.y, -10), _cameraSpeed * Time.deltaTime);
     }
     private void OnCollisionEnter(Collision collision)
     {
         _canJump = true;
-        Debug.Log("Reset Jump");
+        //Debug.Log("Reset Jump");
+        if (collision.gameObject.CompareTag("DamageCube"))
+        {
+            //Debug.Log("poopiebuthole");
+            _UIelements.DoDamage();
+        }
     }
 }

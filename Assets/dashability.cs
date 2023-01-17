@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class dashability : MonoBehaviour
 {
-    
+    [SerializeField] private Rigidbody _rb;
     [SerializeField] float timer;
     int dashabilitycounterright = 0;
     int dashabilitycounterleft = 0;
@@ -31,14 +31,16 @@ public class dashability : MonoBehaviour
         }
         if (dashabilitycounterright == 2)
         {
-             Vector3 move = new Vector3(-50,0,0);
-             rb_.MovePosition(transform.position + move * Time.deltaTime * speed);
+            _rb.velocity = new Vector3(-15, 0, 0);
+            //Vector3 move = new Vector3(-50,0,0);
+            //rb_.MovePosition(transform.position + move * Time.deltaTime * speed);
              dashabilitycounterright = 0;
         }
         if (dashabilitycounterleft == 2)
         {
-            Vector3 move = new Vector3(50, 0, 0);
-            rb_.MovePosition(transform.position + move * Time.deltaTime * speed);
+            _rb.velocity = new Vector3(15, 0, 0);
+            //Vector3 move = new Vector3(50, 0, 0);
+            //rb_.MovePosition(transform.position + move * Time.deltaTime * speed);
             dashabilitycounterleft = 0;
         }
         if (timer <= 0)

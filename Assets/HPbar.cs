@@ -5,14 +5,17 @@ using TMPro;
 
 public class HPbar : MonoBehaviour
 {
-    [SerializeField] bool nostamina = true;
+    [SerializeField] private Rigidbody _rb;
+    
     [SerializeField] public static int hp = 10;
     [SerializeField] int maxhp;
     [SerializeField] int stamina;
     [SerializeField] HealthBar healthBar;
     private int damage = 1;
     [SerializeField] HealthBar staminaBar;
-
+    [SerializeField] int lazerDamage;
+    [SerializeField] float timerforstamina;
+    [SerializeField] bool nostamina = true;
 
     void Start()
     {
@@ -22,11 +25,11 @@ public class HPbar : MonoBehaviour
     void Update()
     {
 
-        if (stamina < 1)
+        if (stamina < 0)
         {
             nostamina = false;
         }
-        else if(stamina > 0 && hp == 10)
+        else if(stamina > 0 || hp == 10)
         {
             nostamina = true;
         }
@@ -46,10 +49,14 @@ public class HPbar : MonoBehaviour
                 Stamina();
             }
         }
-        if (Input.GetKeyUp(KeyCode.G))
+        timerforstamina -= Time.deltaTime;
+        if(stamina <= 9)
         {
-            hp -= damage;
-            healthBar.SetHealth(hp);
+            if(timerforstamina <= 0)
+            {
+                stamina += 1;
+                timerforstamina = 3f;
+            }
         }
           
     }
@@ -62,5 +69,15 @@ public class HPbar : MonoBehaviour
     {
         stamina -= 1;
         staminaBar.SetHealth(stamina);
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        //geef de lazer the tag lazer zo dat waarneer je er opvalt schiet je omhoog
+        if (collision.gameObject.CompareTag("lazer"))
+        {
+            HPbar.hp -= lazerDamage;
+            healthBar.SetHealth(hp);
+            _rb.velocity = new Vector3(0, 10, 0);
+        }
     }
 }

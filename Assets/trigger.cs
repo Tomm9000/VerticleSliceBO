@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class trigger : MonoBehaviour
 {
-    [SerializeField] GameObject escbutton;
+    [SerializeField] GameObject button;
     [SerializeField] private Rigidbody _rb;
-        public Vector3 _movetoposition;
-        public Vector3 _exittrigger;
+        
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "esctrigger")
         {
-            escbutton.transform.position = _movetoposition;
+            button.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Debug.Log("werkt");
@@ -24,7 +23,7 @@ public class trigger : MonoBehaviour
     {
         if (other.gameObject.tag == "esctrigger")
         {
-            escbutton.transform.position = _exittrigger;
+            button.SetActive(false);
             
         }
     }
