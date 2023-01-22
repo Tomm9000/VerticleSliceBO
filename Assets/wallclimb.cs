@@ -20,17 +20,5 @@ public class wallclimb : MonoBehaviour
             
         }
     }
-    void OnTriggerStay(Collider other)
-    {
-
-        
-            
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                //_rb.velocity = new Vector3(0, 10, 0);
-                //transform.position += Vector3.up;
-                //_rb.useGravity = false;
-            }
-        
-    }
+   
 }

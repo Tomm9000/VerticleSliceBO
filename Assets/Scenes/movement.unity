@@ -679,13 +679,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 1169527354}
-  nostamina: 1
   maxhp: 10
   stamina: 10
   healthBar: {fileID: 527990197}
   staminaBar: {fileID: 952154410}
   lazerDamage: 3
   timerforstamina: 0
+  nostamina: 1
 --- !u!54 &1169527354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -773,7 +773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169527352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.606878, y: 5.4142113, z: 3.02}
+  m_LocalPosition: {x: 0.12, y: 0.19, z: 3.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

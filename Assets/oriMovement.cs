@@ -80,10 +80,10 @@ public class oriMovement : MonoBehaviour
     {
         _canJump = true;
         //Debug.Log("Reset Jump");
-        if (collision.gameObject.CompareTag("DamageCube"))
+       // if (collision.gameObject.CompareTag("DamageCube"))
         {
             //Debug.Log("poopiebuthole");
-            _UIelements.DoDamage();
+            //_UIelements.DoDamage();
         }
     }
 }
