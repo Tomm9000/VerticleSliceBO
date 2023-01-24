@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class UIElements : MonoBehaviour
 {
-    [SerializeField] private Rigidbody _rb;
     [SerializeField] GameObject Energy;
     [SerializeField] GameObject Health;
     [SerializeField] int hp = 5;
@@ -43,30 +42,20 @@ public class UIElements : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
-                _Health();
+                _Health(1);
                 Stamina();
             }
         }
        
     }
-    void _Health()
+    public void _Health(int HPchange)
     {
-        hp += 1;
-        
+            hp += HPchange;
+            DoDamage();
     }
-    void Stamina() 
+    public void Stamina() 
     {
         energy -= 1;
-        
-    }
-    
-    void OnCollisionEnter(Collision collision)
-    {
-        //geef de lazer the tag lazer zo dat waarneer je er opvalt schiet je omhoog
-        if (collision.gameObject.CompareTag("lazer"))
-        {
-            hp -= 1;
-            _rb.velocity = new Vector3(0, 10, 0);
-        }
+        OnEnergyUse();
     }
 }
