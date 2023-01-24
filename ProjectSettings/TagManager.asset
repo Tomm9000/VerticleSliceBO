@@ -8,6 +8,7 @@ TagManager:
   - lazer
   - climbablewall
   - esctrigger
+  - respawnground
   layers:
   - Default
   - TransparentFX
