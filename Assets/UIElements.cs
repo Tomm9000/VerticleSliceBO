@@ -10,6 +10,7 @@ public class UIElements : MonoBehaviour
     [SerializeField] int hp = 5;
     [SerializeField] int energy = 5;
     bool nostamina = true;
+    [SerializeField] Vector3 spawnpoint;
     public void DoDamage()
     {
         hp --;
@@ -45,6 +46,11 @@ public class UIElements : MonoBehaviour
                 _Health(1);
                 Stamina();
             }
+        }
+        if(hp <= 0)
+        {
+            hp = 5;
+            transform.position = spawnpoint;
         }
        
     }
